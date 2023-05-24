@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length converter</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Length converter</h1>
+        <img src="scale.jpg" alt="hello"/>
+        <script src="length.js" defer></script>
+    </div>
+
+    <div class="container">
+        <form action="">
+            <div class="task">
+                <!--FROM-->
+                <div class="from-container task-cintainers">
+                    <label for="input">From:</label>
+                    <input type="text" placeholder="Input" id="input"/>
+                    <select name="from" id="inputType">
+                        <option value="meter" selected> Meter</option>
+                        <option value="kilometer"> kilometer</option>
+                        <option value="centimeter"> Centimeter</option>
+                        <option value="foot">Foot</option>
+                        <option value="inch">Inch</option>
+                    </select>
+                </div>
+                <!--TO-->
+                <div class="to-container task-cintainers">
+                    <label for="result">TO:</label>
+                    <input type="numeric" placeholder="Result" id="result"/>
+                    <select name="to" id="resultType">
+                        <option value="meter"> Meter</option>
+                        <option value="kilometer"> kilometer</option>
+                        <option value="centimeter"> Centimeter</option>
+                        <option value="foot">Foot</option>
+                        <option value="inch" selected>Inch</option>
+                    </select>
+                </div>
+            </div>
+            <input type="Reset" />
+        </form>
+    </div>
+    <style>
+        @import url("font open-sans(google)");
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: cadetblue;
+            background-image: linear-gradient(0deg,#5b1cc8 0%, #29d490 100%);
+        }
+        .title{
+            text-align: center;
+        }
+        .title h1{
+            text-align: center;
+            color: rgb(147, 99, 83);
+            font-weight: 900;
+            padding-top: 20px;
+            font-size: 2.3rem;
+        }
+        .title img{
+            width: 120px;
+            padding-top: 6px;
+            position: center;
+            left: 110px;
+        }
+        .container{
+            padding: 20px;
+            margin: 30px auto;
+            align-self: center;
+        }
+        .task{
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+            width: 6%;
+            margin:auto;
+        }
+        .task-containers{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0;
+            width: 90%;
+        }
+        label{
+            font-size: x-large;
+            font-weight: 600;
+        }
+        input,select{
+            margin-bottom: 19px;
+            padding: 18px;
+            font-size: large;
+            outline-color: rgb(84, 194, 36);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px rgba(177,177,178,0.459);
+        }
+        form{
+            display: grid;
+            place-items: center;
+        }
+        input[type="reset"]{
+            width: 60%;
+        }
+        @media only screen and(max-width: 70px){
+            .container{
+                width: 90%;
+                margin: 0 auto;
+            }
+            .task-containers{
+                width: 100%;
+            }
+            .task{
+                width: 100%;
+                flex-direction: column;
+                gap: 20px;
+            }
+            input,select {
+                margin-bottom: 19px;
+                padding: 10px;
+
+            }
+            input[type="reset"]{
+                width: 100%;
+            }
+        }
+
+    </style>
+</body>
+</html>
